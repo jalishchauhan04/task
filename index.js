@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(express.json());
 
+app.get("/test", () => {
+  console.log("test");
+});
+
 app.post("/translate", async (req, res) => {
   try {
     const { text } = req.body;
